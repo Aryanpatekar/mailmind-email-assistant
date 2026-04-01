@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MailMind - Intelligence, Rendered.</title>
+  
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+  
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/landing.css">
+  
+  <!-- Icons -->
+  <script src="https://unpkg.com/feather-icons"></script>
+</head>
+<body>
+
+  <!-- Animated Mesh Background -->
+  <div class="mesh-bg">
+    <div class="blob blob-cyan"></div>
+    <div class="blob blob-purple"></div>
+    <div class="blob blob-blue"></div>
+  </div>
+
+  <!-- Transparent to Glass Navbar -->
+  <header class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="#" class="brand">
+        <i data-feather="box" class="brand-icon"></i>
+        <span>MailMind</span>
+      </a>
+      <nav class="nav-links">
+        <a href="#features">Features</a>
+        <a href="#architecture">Architecture</a>
+        <a href="#security">Security</a>
+      </nav>
+      <div class="nav-actions">
+        <a href="app.html" class="btn-glass glow-border">
+          <span>Enter App</span>
+          <i data-feather="arrow-right"></i>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO SECTION -->
+    <section class="hero">
+      <div class="hero-container">
+        
+        <div class="hero-content scroll-reveal">
+          <div class="pill-badge">
+            <span class="live-dot"></span> Next-Gen AI Automation
+          </div>
+          <h1 class="hero-title">Intelligence,<br><span class="gradient-text">Rendered.</span></h1>
+          <p class="hero-subtitle">
+            A multi-dimensional approach to email automation. MailMind's 8-agent architecture turns minimal context into highly professional, perfectly-toned emails in milliseconds.
+          </p>
+          <div class="hero-cta">
+            <a href="app.html" class="btn-primary-3d">
+              Start Automating
+            </a>
+            <a href="#architecture" class="btn-outline-glass">
+              See the Architecture
+            </a>
+          </div>
+        </div>
+
+        <!-- 3D Parallax Card -->
+        <div class="hero-visual scroll-reveal delay-1">
+          <div class="tilt-wrapper" id="tilt-wrapper">
+            <div class="glass-card 3d-card" id="tilt-card">
+              <div class="card-glow"></div>
+              
+              <!-- Abstract Mockup UI -->
+              <div class="mockup-header">
+                <div class="circles"><i></i><i></i><i></i></div>
+                <div class="mockup-search">api.mailmind.io/generate</div>
+              </div>
+              <div class="mockup-body">
+                <div class="mockup-line w-40"></div>
+                <div class="mockup-line w-80"></div>
+                <div class="mockup-line w-60"></div>
+                
+                <div class="mockup-glass-box">
+                  <div class="floating-icon"><i data-feather="cpu"></i></div>
+                  <div class="box-text">
+                    <span class="highlight">Agent 3:</span> Analyzing Tone & Intent...
+                  </div>
+                </div>
+                
+                <div class="mockup-line w-70 mt-4"></div>
+                <div class="mockup-line w-50"></div>
+              </div>
+              
+              <!-- Floating aesthetic elements -->
+              <img src="https://raw.githubusercontent.com/feathericons/feather/master/icons/database.svg" class="float-el fl-1" alt="">
+              <img src="https://raw.githubusercontent.com/feathericons/feather/master/icons/zap.svg" class="float-el fl-2" alt="">
+
+            </div>
+          </div>
+        </div>
+        
+      </div>
+    </section>
+
+    <!-- BENTO BOX FEATURES -->
+    <section class="bento-section" id="features">
+      <div class="section-title scroll-reveal">
+        <h2>The Agent Ecosystem</h2>
+        <p>A deterministic pipeline wrapped in glass.</p>
+      </div>
+
+      <div class="bento-grid">
+        
+        <!-- Large Card -->
+        <div class="bento-glass span-2 scroll-reveal">
+          <div class="bento-icon"><i data-feather="git-commit"></i></div>
+          <h3>Advanced Intent Parsing</h3>
+          <p>Instantly extracts purpose, urgency, and recipient hierarchy from your shortest inputs.</p>
+          <div class="abstract-graphic graphic-1"></div>
+        </div>
+
+        <!-- Small Card -->
+        <div class="bento-glass scroll-reveal delay-1">
+          <div class="bento-icon"><i data-feather="sliders"></i></div>
+          <h3>Tone Adjustment</h3>
+          <p>Dynamically adapts grammar to High-Formal or Casual depending on the recipient footprint.</p>
+        </div>
+
+        <!-- Small Card -->
+        <div class="bento-glass scroll-reveal delay-2">
+          <div class="bento-icon"><i data-feather="shield"></i></div>
+          <h3>Strict Validation</h3>
+          <p>Never fires an SMTP payload without explicit User Confirmation protocol.</p>
+        </div>
+
+        <!-- Large Card -->
+        <div class="bento-glass span-2 scroll-reveal">
+          <div class="bento-icon"><i data-feather="refresh-ccw"></i></div>
+          <h3>SMTP Retry Protocol</h3>
+          <p>Built-in fault tolerance. Exceed constraints with exponential backoff and fail-safes.</p>
+          <div class="abstract-graphic graphic-2"></div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- FINAL CTA -->
+    <section class="final-cta">
+      <div class="glass-cta scroll-reveal">
+        <h2>Stop typing.<br>Start commanding.</h2>
+        <p>Enter the ecosystem and regain your lost hours.</p>
+        <a href="app.html" class="btn-primary-3d large">Launch Console <i data-feather="arrow-right"></i></a>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="glass-footer">
+    <div class="footer-content">
+      <div class="footer-brand">
+        <i data-feather="box"></i> MailMind
+      </div>
+      <div class="footer-legal">
+        Designed exclusively for the future.
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/landing.js"></script>
+  <script>
+    feather.replace();
+  </script>
+</body>
+</html>
