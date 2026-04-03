@@ -1,6 +1,8 @@
 # AI Email Assistant with Multi-Agent System
 
-![Google Stitch UI Prototype](prototype.png)
+![Landing Page Preview](docs/images/landing-page.png)
+
+![App Page Preview](docs/images/app-page.png)
 
 ---
 
