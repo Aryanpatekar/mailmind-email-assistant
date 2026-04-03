@@ -1,6 +1,6 @@
 # AI Email Assistant with Multi-Agent System
 
-![MailMind App Dashboard](app-screenshot.png)
+![Google Stitch UI Prototype](prototype.png)
 
 ---
 

@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>MailMind - Intelligence, Rendered.</title>
+  <title>Curator AI - Write Professional Emails in Seconds</title>
   
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -15,8 +15,9 @@
   
   <!-- Icons -->
   <script src="https://unpkg.com/feather-icons"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
 </head>
-<body>
+<body id="top">
 
   <!-- Animated Mesh Background -->
   <div class="mesh-bg">
@@ -25,24 +26,27 @@
     <div class="blob blob-blue"></div>
   </div>
 
-  <!-- Transparent to Glass Navbar -->
-  <header class="navbar" id="navbar">
-    <div class="nav-container">
-      <a href="#" class="brand">
-        <i data-feather="box" class="brand-icon"></i>
-        <span>MailMind</span>
+  <!-- Fixed pill navbar -->
+  <header class="site-nav" id="site-nav">
+    <div class="site-nav__inner">
+      <a href="#top" class="site-nav__brand" aria-label="MailMind home">
+        <span class="site-nav__brand-mark">
+          <i data-feather="box"></i>
+        </span>
+        <span class="site-nav__brand-text">MailMind</span>
       </a>
-      <nav class="nav-links">
-        <a href="#features">Features</a>
-        <a href="#architecture">Architecture</a>
-        <a href="#security">Security</a>
+
+      <nav class="site-nav__links" aria-label="Primary">
+        <span class="site-nav__indicator" aria-hidden="true"></span>
+        <a href="#features" class="site-nav__link">Features</a>
+        <a href="#architecture" class="site-nav__link">Architecture</a>
+        <a href="#security" class="site-nav__link">Security</a>
       </nav>
-      <div class="nav-actions">
-        <a href="app.html" class="btn-glass glow-border">
-          <span>Enter App</span>
-          <i data-feather="arrow-right"></i>
-        </a>
-      </div>
+
+      <a href="app.html" class="site-nav__cta">
+        <span>Launch App</span>
+        <i data-feather="arrow-up-right"></i>
+      </a>
     </div>
   </header>
 
@@ -53,53 +57,35 @@
         
         <div class="hero-content scroll-reveal">
           <div class="pill-badge">
-            <span class="live-dot"></span> Next-Gen AI Automation
+            <span class="live-dot"></span> INTELLIGENT COMMUNICATION AI
           </div>
-          <h1 class="hero-title">Intelligence,<br><span class="gradient-text">Rendered.</span></h1>
+          <h1 class="hero-title">Write Professional<br>Emails in Seconds<br>with <span class="gradient-text">AI</span></h1>
           <p class="hero-subtitle">
-            A multi-dimensional approach to email automation. MailMind's 8-agent architecture turns minimal context into highly professional, perfectly-toned emails in milliseconds.
+            The definitive test for pressure communication. Powered by neural synthesis, designed for high-performance professionals.
           </p>
           <div class="hero-cta">
             <a href="app.html" class="btn-primary-3d">
-              Start Automating
+              Start Drafting
             </a>
-            <a href="#architecture" class="btn-outline-glass">
-              See the Architecture
+            <a href="#templates" class="btn-outline-glass">
+              Explore Templates
             </a>
           </div>
         </div>
 
-        <!-- 3D Parallax Card -->
+        <!-- Feature Image Mockup -->
         <div class="hero-visual scroll-reveal delay-1">
-          <div class="tilt-wrapper" id="tilt-wrapper">
-            <div class="glass-card 3d-card" id="tilt-card">
-              <div class="card-glow"></div>
-              
-              <!-- Abstract Mockup UI -->
-              <div class="mockup-header">
+          <div class="feature-mockup">
+            <div class="mockup-card">
+              <div class="mockup-header-simple">
                 <div class="circles"><i></i><i></i><i></i></div>
-                <div class="mockup-search">api.mailmind.io/generate</div>
               </div>
-              <div class="mockup-body">
-                <div class="mockup-line w-40"></div>
-                <div class="mockup-line w-80"></div>
-                <div class="mockup-line w-60"></div>
-                
-                <div class="mockup-glass-box">
-                  <div class="floating-icon"><i data-feather="cpu"></i></div>
-                  <div class="box-text">
-                    <span class="highlight">Agent 3:</span> Analyzing Tone & Intent...
-                  </div>
-                </div>
-                
-                <div class="mockup-line w-70 mt-4"></div>
-                <div class="mockup-line w-50"></div>
+              <div class="mockup-content">
+                <div class="mockup-text-line" style="width: 60%; height: 8px; background: var(--surface-container-high); border-radius: 4px; margin-bottom: 16px;"></div>
+                <div class="mockup-text-line" style="width: 100%; height: 8px; background: var(--surface-container-high); border-radius: 4px; margin-bottom: 16px;"></div>
+                <div class="mockup-text-line" style="width: 80%; height: 8px; background: var(--surface-container-high); border-radius: 4px; margin-bottom: 16px;"></div>
+                <div class="mockup-button" style="width: 120px; height: 40px; background: var(--primary); border-radius: 6px; margin-top: 24px;"></div>
               </div>
-              
-              <!-- Floating aesthetic elements -->
-              <img src="https://raw.githubusercontent.com/feathericons/feather/master/icons/database.svg" class="float-el fl-1" alt="">
-              <img src="https://raw.githubusercontent.com/feathericons/feather/master/icons/zap.svg" class="float-el fl-2" alt="">
-
             </div>
           </div>
         </div>
@@ -107,43 +93,40 @@
       </div>
     </section>
 
-    <!-- BENTO BOX FEATURES -->
-    <section class="bento-section" id="features">
+    <!-- FEATURES SECTION -->
+    <section class="features-section" id="features">
       <div class="section-title scroll-reveal">
-        <h2>The Agent Ecosystem</h2>
-        <p>A deterministic pipeline wrapped in glass.</p>
+        <h2>Intelligent Communication Features</h2>
+        <p>Everything you need to communicate like a pro.</p>
       </div>
 
-      <div class="bento-grid">
+      <div class="features-grid">
         
-        <!-- Large Card -->
-        <div class="bento-glass span-2 scroll-reveal">
-          <div class="bento-icon"><i data-feather="git-commit"></i></div>
-          <h3>Advanced Intent Parsing</h3>
-          <p>Instantly extracts purpose, urgency, and recipient hierarchy from your shortest inputs.</p>
-          <div class="abstract-graphic graphic-1"></div>
+        <!-- Feature 1: Contextual Synthesis -->
+        <div class="feature-card scroll-reveal">
+          <div class="feature-icon"><i data-feather="zap"></i></div>
+          <h3>Contextual Synthesis</h3>
+          <p>AI learns from the nuances of your previous conversations, ensuring every email maintains your unique voice and context.</p>
+          <div class="feature-image"></div>
         </div>
 
-        <!-- Small Card -->
-        <div class="bento-glass scroll-reveal delay-1">
-          <div class="bento-icon"><i data-feather="sliders"></i></div>
-          <h3>Tone Adjustment</h3>
-          <p>Dynamically adapts grammar to High-Formal or Casual depending on the recipient footprint.</p>
+        <!-- Feature 2: Tone Calibration -->
+        <div class="feature-card scroll-reveal delay-1">
+          <div class="feature-header-dark">
+            <h3>Tone Calibration</h3>
+          </div>
+          <p>Shift from transaction authority to social collaboration with a single drop down selection. Fine-tune precision tone matching in real-time.</p>
+          <div class="feature-controls">
+            <button class="feature-btn">FORMAL</button>
+            <button class="feature-btn">CASUAL</button>
+          </div>
         </div>
 
-        <!-- Small Card -->
-        <div class="bento-glass scroll-reveal delay-2">
-          <div class="bento-icon"><i data-feather="shield"></i></div>
-          <h3>Strict Validation</h3>
-          <p>Never fires an SMTP payload without explicit User Confirmation protocol.</p>
-        </div>
-
-        <!-- Large Card -->
-        <div class="bento-glass span-2 scroll-reveal">
-          <div class="bento-icon"><i data-feather="refresh-ccw"></i></div>
-          <h3>SMTP Retry Protocol</h3>
-          <p>Built-in fault tolerance. Exceed constraints with exponential backoff and fail-safes.</p>
-          <div class="abstract-graphic graphic-2"></div>
+        <!-- Feature 3: Memory Vault -->
+        <div class="feature-card scroll-reveal delay-2">
+          <div class="feature-icon"><i data-feather="lock"></i></div>
+          <h3>Memory Vault</h3>
+          <p>Securely store common phrases, professional signatures, and contact context. Curator AI learns from your most effective responses.</p>
         </div>
 
       </div>
@@ -151,10 +134,10 @@
 
     <!-- FINAL CTA -->
     <section class="final-cta">
-      <div class="glass-cta scroll-reveal">
-        <h2>Stop typing.<br>Start commanding.</h2>
-        <p>Enter the ecosystem and regain your lost hours.</p>
-        <a href="app.html" class="btn-primary-3d large">Launch Console <i data-feather="arrow-right"></i></a>
+      <div class="glass-cta-dark scroll-reveal">
+        <h2>Ready to elevate your communication?</h2>
+        <p>Join 10,000+ professionals using Curator AI to write smarter, faster emails.</p>
+        <a href="app.html" class="btn-cta-light">Get Started Free</a>
       </div>
     </section>
   </main>
@@ -162,18 +145,60 @@
   <!-- Footer -->
   <footer class="glass-footer">
     <div class="footer-content">
-      <div class="footer-brand">
-        <i data-feather="box"></i> MailMind
+      <div class="footer-column">
+        <h4>Curator AI</h4>
+        <ul>
+          <li><a href="#">Features</a></li>
+          <li><a href="#">Pricing</a></li>
+          <li><a href="#">Blog</a></li>
+        </ul>
       </div>
-      <div class="footer-legal">
-        Designed exclusively for the future.
+      <div class="footer-column">
+        <h4>Company</h4>
+        <ul>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Contact</a></li>
+          <li><a href="#">Careers</a></li>
+        </ul>
       </div>
+      <div class="footer-column">
+        <h4>Legal</h4>
+        <ul>
+          <li><a href="#">Privacy</a></li>
+          <li><a href="#">Terms</a></li>
+          <li><a href="#">Security</a></li>
+        </ul>
+      </div>
+      <div class="footer-column">
+        <h4>Follow</h4>
+        <div class="social-icons">
+          <a href="#"><i data-feather="twitter"></i></a>
+          <a href="#"><i data-feather="linkedin"></i></a>
+          <a href="#"><i data-feather="github"></i></a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 Curator AI. All rights reserved.</p>
     </div>
   </footer>
 
   <script src="js/landing.js"></script>
   <script>
     feather.replace();
+    
+    // Smooth scroll for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        if (this.getAttribute('href') !== '#top') {
+          e.preventDefault();
+          const target = document.querySelector(this.getAttribute('href'));
+          if (target) {
+            target.scrollIntoView({ behavior: 'smooth' });
+          }
+        }
+      });
+    });
   </script>
 </body>
 </html>

@@ -1,19 +1,102 @@
 /**
  * LANDING PAGE JAVASCRIPT
- * Handles strictly 3D Parallax Tilt effects and Scroll Animations.
+ * Handles navbar motion, 3D parallax tilt, and scroll animations.
  */
 
 document.addEventListener('DOMContentLoaded', () => {
-  
-  // 1. STICKY NAVBAR EFFECT
-  const navbar = document.getElementById('navbar');
-  window.addEventListener('scroll', () => {
-    if (window.scrollY > 50) {
-      navbar.classList.add('scrolled');
-    } else {
-      navbar.classList.remove('scrolled');
+
+  // 1. NAVBAR SCROLL + HOVER EFFECTS
+  const navbar = document.getElementById('site-nav');
+  const navLinks = navbar ? Array.from(navbar.querySelectorAll('.site-nav__link')) : [];
+  const navIndicator = navbar ? navbar.querySelector('.site-nav__indicator') : null;
+  const navLinksWrap = navbar ? navbar.querySelector('.site-nav__links') : null;
+  const navCta = navbar ? navbar.querySelector('.site-nav__cta') : null;
+
+  if (navbar && window.gsap) {
+    gsap.fromTo(
+      navbar,
+      { y: -28, opacity: 0 },
+      { y: 0, opacity: 1, duration: 0.8, ease: 'power3.out' }
+    );
+  }
+
+  const syncNavbarState = () => {
+    if (!navbar || !window.gsap) {
+      return;
     }
+
+    const scrolled = window.scrollY > 40;
+    navbar.classList.toggle('is-scrolled', scrolled);
+
+    gsap.to(navbar, {
+      paddingTop: scrolled ? 14 : 22,
+      paddingBottom: scrolled ? 14 : 22,
+      duration: 0.25,
+      ease: 'power2.out'
+    });
+
+    const inner = navbar.querySelector('.site-nav__inner');
+    if (inner) {
+      gsap.to(inner, {
+        scale: scrolled ? 0.99 : 1,
+        duration: 0.25,
+        ease: 'power2.out'
+      });
+    }
+  };
+
+  window.addEventListener('scroll', syncNavbarState, { passive: true });
+  syncNavbarState();
+
+  const animateIndicatorTo = (target) => {
+    if (!navIndicator || !navLinksWrap || !window.gsap) {
+      return;
+    }
+
+    const linkRect = target.getBoundingClientRect();
+    const wrapRect = navLinksWrap.getBoundingClientRect();
+    const x = linkRect.left - wrapRect.left;
+
+    gsap.to(navIndicator, {
+      x,
+      width: linkRect.width,
+      opacity: 1,
+      duration: 0.32,
+      ease: 'power3.out'
+    });
+  };
+
+  const hideIndicator = () => {
+    if (!navIndicator || !window.gsap) {
+      return;
+    }
+
+    gsap.to(navIndicator, {
+      opacity: 0,
+      width: 0,
+      duration: 0.2,
+      ease: 'power2.out'
+    });
+  };
+
+  navLinks.forEach((link) => {
+    link.addEventListener('mouseenter', () => animateIndicatorTo(link));
+    link.addEventListener('focus', () => animateIndicatorTo(link));
   });
+
+  if (navLinksWrap) {
+    navLinksWrap.addEventListener('mouseleave', hideIndicator);
+  }
+
+  if (navCta && window.gsap) {
+    navCta.addEventListener('mouseenter', () => {
+      gsap.to(navCta, { y: -2, duration: 0.22, ease: 'power2.out' });
+    });
+
+    navCta.addEventListener('mouseleave', () => {
+      gsap.to(navCta, { y: 0, duration: 0.22, ease: 'power2.out' });
+    });
+  }
 
   // 2. 3D PARALLAX TILT EFFECT (HERO CARD)
   const wrapper = document.getElementById('tilt-wrapper');
